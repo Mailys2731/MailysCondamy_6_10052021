@@ -12,7 +12,10 @@ const AuthsSchema = mongoose.Schema(
         },
         password:{
             type:String,
-            required: true
+            required: true,
+        },
+        token: {
+            type:String
         }
     }
 );
