@@ -2,10 +2,10 @@
 
 Développement de la partie back-end d'un site d'avis gastronomiques
 ----
-* Clonner le dépôt github
+* **Cloner le dépôt github** : https://github.com/Mailys2731/MailysCondamy_6_10052021.git.
 
-* Installer les dépendances (`npm install`) dans le dossier back-end et dans le dossier front-end (+ `npm install sass`).
+* **Installer les dépendances** : `npm install` dans le dossier back-end  **ET**  dans le dossier front-end (**+** `npm install sass`).
 
-* Lancer le server dans le dossier back-end (`npm run start`)
+* **Lancer le serveur back** : dans le dossier back-end `npm run start`.
 
-* Lancer le serveur dans le dossier front-end (`npm run start`)
+* **Lancer le serveur front** : dans le dossier front-end `npm run start`.
