@@ -11,3 +11,5 @@ Développement de la partie back-end d'un site d'avis gastronomiques
 * **Lancer le serveur du back** : dans le dossier back-end effectuer `npm run start`
 
 * **Lancer le serveur du front** : dans le dossier front-end effectuer `npm run start`
+
+* Se rendre ensuite à l'adresse suivante : **http://localhost:4200/login** pour accéder au site web
