@@ -6,6 +6,6 @@ Développement de la partie back-end d'un site d'avis gastronomiques
 
 * **Installer les dépendances** : `npm install` dans le dossier back-end  **ET**  dans le dossier front-end (**+** `npm install sass`).
 
-* **Lancer le serveur back** : dans le dossier back-end `npm run start`.
+* **Lancer le serveur du back** : dans le dossier back-end `npm run start`.
 
-* **Lancer le serveur front** : dans le dossier front-end `npm run start`.
+* **Lancer le serveur du front** : dans le dossier front-end `npm run start`.
