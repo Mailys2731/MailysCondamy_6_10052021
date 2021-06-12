@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt');
+const CryptoJS = require('crypto-js');
 const jwt = require('jsonwebtoken');
 const { Auth } = require('../models/authsModel');
 
@@ -6,20 +7,30 @@ const { Auth } = require('../models/authsModel');
 exports.signup = (req, res) => {
   bcrypt.hash(req.body.password, 10)
     .then(hash => {
+      const email = CryptoJS.SHA256(req.body.email, "mailys-projet6").toString();
       const auth = new Auth({
-        email: req.body.email,
+        email,//req.body.email,//CryptoJS.AES.encrypt(req.body.email, "mailys-projet6").toString(),
         password: hash
       });
       auth.save()
         .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))
-        .catch(error => res.status(400).json({ error }));
+        .catch(error => {
+          console.log(error);
+          res.status(400).json({ error })
+        });
     })
-    .catch(error => res.status(500).json({ error }));
+    .catch(error => {
+      console.log(error);
+      res.status(500).json({ error })
+    });
+    
 };
 
 // Connexion à un compte utilisateur existant
 exports.login = (req, res) => {
-  Auth.findOne({ email: req.body.email })
+  const email = CryptoJS.SHA256(req.body.email, "mailys-projet6").toString();
+  console.log(email)
+  Auth.findOne({ email})//CryptoJS.AES.encrypt (req.body.email, "mailys-projet6") })
     .then(Auth => {
       if (!Auth) {
         return res.status(401).json({ error: 'Utilisateur non trouvé !' });
